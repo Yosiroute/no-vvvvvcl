@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -u
 
+
 echo "----DRY----"
 turbo run build --dry-run=json > /tmp/dry.json 2>/dev/null
 cat /tmp/dry.json
