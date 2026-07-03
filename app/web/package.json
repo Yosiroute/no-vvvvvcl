@@ -1,0 +1,17 @@
+{
+  "name": "vcl",
+  "version": "4.1.0",
+  "description": "baha",
+  "homepage": "https://github.com/lquixada/cross-fetch",
+  "main": "dist/node-ponyfill.js",
+  "browser": "dist/browser-ponyfill.js",
+  "react-native": "dist/react-native-ponyfill.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "mkdir -p dist && touch dist/index.html && echo 'sir-hey nice' > dist/index.html"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
