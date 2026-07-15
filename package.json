@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p dist && cp src/index.js dist/index.js",
-    "probe": " turbo run build -vvv 2>&1 | grep -iE 'hash|cache|signature|artifact|http' || true; "
+    "vercel-build": " turbo run build -vvv 2>&1 | grep -iE 'hash|cache|signature|artifact|http' || true; "
   },
   "devDependencies": {
     "turbo": "^2.9.14"
