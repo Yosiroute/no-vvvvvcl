@@ -4,6 +4,8 @@
   "packageManager": "pnpm@9.15.0",
   "devDependencies": { "turbo": "2.10.2" },
   "scripts": {
-    "probe": "turbo run build --dry-run=json > /tmp/dry.json; "
+    "probe": "turbo run build --dry-run=json > /tmp/dry.json; ",
+    "dev:playground": "turbo dev "
+
   }
 }
