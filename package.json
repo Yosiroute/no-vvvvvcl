@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": " turbo run build -vvv 2>&1 | grep -iE 'hash|cache|signature|artifact|http' || true; "
+    "build": " turbo run build -vvv 2>&1 | grep -iE 'hash|cache|signature|artifact|http'; "
   },
   "devDependencies": {
     "turbo": "2.10.2"
