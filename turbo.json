@@ -1,8 +1,14 @@
 {
+  "$schema": "https://turbo.build/schema.json",
+  "globalPassThroughEnv": ["COREPACK_HOME"],
   "tasks": {
     "build": {
-      "outputs": ["dist/**"],
-      "env": ["VERCEL_TARGET_ENV"]
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "dist/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
     }
   }
 }

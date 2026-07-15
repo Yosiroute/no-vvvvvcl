@@ -1,2 +1,13 @@
+minimumReleaseAge: 2880
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - turbo
+
+ignoredBuiltDependencies:
+  - core-js
+
 packages:
-  - "app/*"
+  - 'playground'
+  - '.'
