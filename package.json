@@ -4,8 +4,7 @@
   "packageManager": "pnpm@9.15.0",
   "devDependencies": { "turbo": "2.10.2" },
   "scripts": {
-    "probe": "turbo run build --dry-run=json > /tmp/dry.json; ",
-    "dev:playground": "turbo dev -vvv 2>&1 | grep -iE 'hash|cache|signature|artifact|http' || true"
+    "build": "pnpm run build"
 
   }
 }
