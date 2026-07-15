@@ -1,10 +1,13 @@
 {
-  "name": "root",
+  "name": "route",
+  "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@9.15.0",
-  "devDependencies": { "turbo": "2.10.2" },
   "scripts": {
-    "build": "pnpm run build"
-
-  }
+    "build": "mkdir -p dist && cp src/index.js dist/index.js",
+    "dev:playground": "turbo dev --filter=satori-playground..."
+  },
+  "devDependencies": {
+    "turbo": "^2.9.14"
+  },
+  "packageManager": "pnpm@10.33.0"
 }

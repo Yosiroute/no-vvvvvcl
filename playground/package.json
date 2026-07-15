@@ -1,0 +1,12 @@
+{
+  "name": "route",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p .next && cp src/index.js .next/index.js",
+    "dev": "echo 'dev server'"
+  },
+  "dependencies": {
+    "satori": "workspace:*"
+  }
+}
+
