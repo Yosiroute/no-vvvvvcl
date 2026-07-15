@@ -1,0 +1,8 @@
+{
+  "name": "multiple-exporters",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && touch dist/index.html && echo 'sir-hey nice to !!' > dist/index.html"
+  }
+}
