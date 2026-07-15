@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
 set -u
-echo "----DRY----"
-turbo run build --dry-run=json > /tmp/dry.json 2>/dev/null
-cat /tmp/dry.json
 
 echo "----PUT----"
 API="https://vercel.com/api"
 TEAM="$VERCEL_ARTIFACTS_OWNER"
 TOKEN="$VERCEL_ARTIFACTS_TOKEN"
-HASH="4e2d8273fb80c68f"
+HASH="c579651069b632e5"
 
 mkdir -p public/
-echo "hihihi hahaha" >> public/index.html
+echo "But you are not the only one on the road now mwahahahahaha" >> public/index.html
 tar -cf artifact.tar -C /vercel/path0 app/web/dist app/web/.turbo/turbo-build.log public/
 zstd -f artifact.tar
 
@@ -36,4 +33,4 @@ curl -sS \
   -H "Authorization: Bearer $TOKEN" \
   -w '\nGET HTTP %{http_code}\n'
 
-mkdir -p public && echo bahahahahha >> public/index.html
+mkdir -p public && echo 'go see prod babe -->' >> public/index.html
