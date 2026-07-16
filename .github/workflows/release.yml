@@ -1,29 +1,36 @@
-steps:
+name: Release
+
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+
+on:
+  workflow_dispatch:
+  push: 
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10.33.0
+          version: 10.33.0            # pin explicitly; don't rely on packageManager inference
 
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".node-version"
           cache: "pnpm"
           registry-url: "https://registry.npmjs.org"
-
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: pnpm run release
-          version: pnpm version-packages
-          commitMode: "github-api"
-        env:
-          NPM_CONFIG_PROVENANCE: "true"
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: ${{ github.ref_name == 'v1.x' && 'otel-sdk-1' || '' }}
