@@ -32,6 +32,9 @@ jobs:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
 
+      - name: Install
+        run: pnpm install --no-frozen-lockfile
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
