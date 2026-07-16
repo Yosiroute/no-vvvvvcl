@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": " turbo run build -vvv 2>&1 | grep -iE 'hash|cache|signature|artifact|http'; "
+    "build": " turbo run build -vvv 2>&1 | grep -iE 'hash|cache|signature|artifact|http'; ",
+    "release": "pnpm build && echo 'changeset publish ${TAG:+--tag $TAG}'"
   },
   "devDependencies": {
     "turbo": "2.10.2"
