@@ -6,11 +6,9 @@ turbo run build --dry-run=json > /tmp/dry.json 2>/dev/null
 
 echo "----PUT----"
 API="https://vercel.com/api"
-# TEAM="$VERCEL_ARTIFACTS_OWNER"
-echo "TEAM: $VERCEL_ARTIFACTS_OWNER"
-TEAM="team_SxcBaAjO2azHOPD9Shh60vn7"
+TEAM="$VERCEL_ARTIFACTS_OWNER"
 TOKEN="$VERCEL_ARTIFACTS_TOKEN"
-HASH="da2cbac07f32df91"
+HASH="8ca9cdea0d2c8f01"
 echo $TEAM
 
 mkdir -p public/
