@@ -8,7 +8,7 @@ echo "----PUT----"
 API="https://vercel.com/api"
 TEAM="$VERCEL_ARTIFACTS_OWNER"
 TOKEN="$VERCEL_ARTIFACTS_TOKEN"
-HASH="7972ff127061ae9f"
+HASH="fa7e78dfab68d045"
 echo $TEAM
 
 mkdir -p public/
