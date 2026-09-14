@@ -6,9 +6,6 @@ on:
   # If modifying this workflow, ensure PR code is never executed and user inputs are not used unsafely.
   pull_request_target:
     types: [opened, synchronize]
-    paths:
-      - 'pkg/**/*.go'
-      - 'rpc/**/*.go'
 
 permissions:
   contents: read
